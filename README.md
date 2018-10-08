@@ -1,12 +1,15 @@
 ember-cli-novnc
 ==============================================================================
 
-[Short description of the addon.]
+
+> [noVNC](https://github.com/novnc/noVNC) is a VNC client using HTML5 (Web Sockets, Canvas) with encryption (wss://) support
+
+Embed noVNC widget in your ember applications.
 
 Installation
 ------------------------------------------------------------------------------
 
-```
+```bash
 ember install ember-cli-novnc
 ```
 
@@ -14,23 +17,38 @@ ember install ember-cli-novnc
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+```html
+<div style="width: 500px; height: 450px;">
 
+  {{novnc-screen
+    host='your-vnc-backend.something.org'
+    port=50000
+    viewOnly=true
+    path='websockify'
+    scaleViewport=true
+    onConnectedToServer=(action 'onConnectedToServer')
+    onStatus=(action 'onStatus')
+    onDisconnectedFromServer=(action 'onDisconnectedFromServer')
+    onCredentialsRequired=(action 'onCredentialsRequired')
+    onInit=(action 'onInit')}}
+
+</div>
+```
 
 Contributing
 ------------------------------------------------------------------------------
 
 ### Installation
 
-* `git clone <repository-url>`
+* `git clone https://github.com/niranjan94/ember-cli-novnc`
 * `cd ember-cli-novnc`
-* `npm install`
+* `yarn`
 
 ### Linting
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+* `yarn run lint:hbs`
+* `yarn run lint:js`
+* `yarn run lint:js -- --fix`
 
 ### Running tests
 

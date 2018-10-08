@@ -14,13 +14,5 @@ module('Integration | Component | novnc-screen', function(hooks) {
 
     assert.equal(this.element.textContent.trim(), '');
 
-    // Template block usage:
-    await render(hbs`
-      {{#novnc-screen}}
-        template block text
-      {{/novnc-screen}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });
