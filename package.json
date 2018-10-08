@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-novnc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Embed noVNC in your Ember App.",
   "keywords": [
     "ember-addon",
