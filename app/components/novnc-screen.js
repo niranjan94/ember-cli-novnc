@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-novnc/components/novnc-screen';
